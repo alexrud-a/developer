@@ -8,73 +8,28 @@
                     </h2>
                 </div>
                 <div class="col-sm-12">
+                    <CoolLightBox
+                            :items="portfolio"
+                            :index="index"
+                            :useZoomBar="false"
+                            @close="index = null">
+                    </CoolLightBox>
                     <div class="portfolio__items">
-                        <a class="portfolio__item" data-toggle="lightbox" data-gallery="gallery" href="/img/portfolio-1.jpg">
-                            <img src="/img/portfolio-1.jpg">
+                        <div v-for="(item, indexItem) in portfolio"
+                           :key="indexItem"
+                           class="portfolio__item"
+                           @click="index = indexItem"
+                        >
+                            <img :src="item.src">
                             <div class="portfolio__info">
                                 <h3>
-                                    Photographic
+                                    {{item.title}}
                                 </h3>
                                 <span>
-                                    Photography
+                                    {{item.subtitle}}
                                 </span>
                             </div>
-                        </a>
-                        <a class="portfolio__item" data-toggle="lightbox" data-gallery="gallery" href="/img/portfolio-3.jpg">
-                            <img src="/img/portfolio-3.jpg">
-                            <div class="portfolio__info">
-                                <h3>
-                                    Photographic
-                                </h3>
-                                <span>
-                                    Photography
-                                </span>
-                            </div>
-                        </a>
-                        <a class="portfolio__item" data-toggle="lightbox" data-gallery="gallery" href="/img/portfolio-5.jpg">
-                            <img src="/img/portfolio-5.jpg">
-                            <div class="portfolio__info">
-                                <h3>
-                                    Photographic
-                                </h3>
-                                <span>
-                                    Photography
-                                </span>
-                            </div>
-                        </a>
-                        <a class="portfolio__item" data-toggle="lightbox" data-gallery="gallery" href="/img/portfolio-2.jpg">
-                            <img src="/img/portfolio-2.jpg">
-                            <div class="portfolio__info">
-                                <h3>
-                                    Photographic
-                                </h3>
-                                <span>
-                                    Photography
-                                </span>
-                            </div>
-                        </a>
-                        <a class="portfolio__item" data-toggle="lightbox" data-gallery="gallery" href="/img/portfolio-4.jpg">
-                            <img src="/img/portfolio-4.jpg">
-                            <div class="portfolio__info">
-                                <h3>
-                                    Photographic
-                                </h3>
-                                <span>
-                                    Photography
-                                </span>
-                            </div>
-                        </a>
-                        <a class="portfolio__item" data-toggle="lightbox" data-gallery="gallery" href="/img/portfolio-6.webp">
-                            <img src="/img/portfolio-6.webp">
-                            <div class="portfolio__info">
-                                <h3>
-                                    Photographic
-                                </h3>
-                                <span>
-                                    Photography
-                                </span>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,8 +38,50 @@
 </template>
 
 <script>
+    import CoolLightBox from 'vue-cool-lightbox'
+
     export default {
-        name: "Portfolio"
+        name: "Portfolio",
+        components: {
+            CoolLightBox,
+        },
+        data() {
+            return {
+                portfolio: [
+                    {
+                        title: 'Photographic',
+                        subtitle: 'Photography',
+                        src: '/img/portfolio-1.jpg',
+                    },
+                    {
+                        title: 'Photographic',
+                        subtitle: 'Photography',
+                        src: '/img/portfolio-3.jpg',
+                    },
+                    {
+                        title: 'Photographic',
+                        subtitle: 'Photography',
+                        src: '/img/portfolio-5.jpg',
+                    },
+                    {
+                        title: 'Photographic',
+                        subtitle: 'Photography',
+                        src: '/img/portfolio-2.jpg',
+                    },
+                    {
+                        title: 'Photographic',
+                        subtitle: 'Photography',
+                        src: '/img/portfolio-4.jpg',
+                    },
+                    {
+                        title: 'Photographic',
+                        subtitle: 'Photography',
+                        src: '/img/portfolio-6.webp',
+                    },
+                ],
+                index: null,
+            }
+        }
     }
 </script>
 
@@ -147,6 +144,18 @@
                     grid-row: 3 / 4;
                 }
             }
+        }
+
+        .cool-lightbox {
+            height: 100vh;
+        }
+
+        .cool-lightbox .cool-lightbox-button.cool-lightbox-button--next {
+            right: 40px;
+        }
+
+        .cool-lightbox .cool-lightbox-button.cool-lightbox-button--prev {
+            left: 40px;
         }
     }
 </style>

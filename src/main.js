@@ -22,6 +22,10 @@ import VueFullPage from 'vue-fullpage.js'
 
 Vue.use(VueFullPage);
 
+import CoolLightBox from 'vue-cool-lightbox'
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+
+Vue.use(CoolLightBox)
 
 Vue.config.productionTip = false
 
