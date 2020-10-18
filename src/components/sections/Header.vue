@@ -151,12 +151,10 @@
 
         &__menu {
             width: 50%;
-            padding: 0 20px;
             text-align: right;
 
             @media screen and (min-width: $tablet) {
                 width: auto;
-                padding: 0;
             }
         }
 
