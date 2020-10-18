@@ -34,7 +34,7 @@
                     navigation: false,
                     navigationPosition: 'right',
                     scrollOverflow: true,
-                    fixedElements: '.header',
+                    fixedElements: '.header, #lightbox',
                     onLeave: this.onLeave,
                 },
                 skills: [

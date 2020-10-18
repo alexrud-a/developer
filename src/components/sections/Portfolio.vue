@@ -9,9 +9,11 @@
                 </div>
                 <div class="col-sm-12">
                     <CoolLightBox
+                            id="lightbox"
                             :items="portfolio"
                             :index="index"
                             :useZoomBar="false"
+                            @on-open="lightBox"
                             @close="index = null">
                     </CoolLightBox>
                     <div class="portfolio__items">
@@ -81,6 +83,13 @@
                 ],
                 index: null,
             }
+        },
+        methods: {
+            lightBox() {
+                let parent = document.getElementById('body');
+                let lightbox = document.getElementById('lightbox');
+                parent.append(lightbox);
+            }
         }
     }
 </script>
@@ -144,10 +153,6 @@
                     grid-row: 3 / 4;
                 }
             }
-        }
-
-        .cool-lightbox {
-            height: 100vh;
         }
 
         .cool-lightbox .cool-lightbox-button.cool-lightbox-button--next {
