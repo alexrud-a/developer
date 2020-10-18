@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="title">
+                    <h3 class="title mt-5">
                         Контакты
                     </h3>
                     <form class="contacts__form" method="post" action="mail.php" @submit.prevent="submit">

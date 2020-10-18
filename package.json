@@ -18,7 +18,8 @@
     "vue": "^2.6.11",
     "vue-agile": "^1.1.3",
     "vue-cool-lightbox": "^2.6.4",
-    "vue-fullpage.js": "^0.1.6"
+    "vue-fullpage.js": "^0.1.6",
+    "vue-number-animation": "^1.0.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

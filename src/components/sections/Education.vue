@@ -2,7 +2,7 @@
     <section class="section education" data-anchor="education">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mt-5">
                     <h2 class="title mt-5">
                         Образование
                     </h2>

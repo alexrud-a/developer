@@ -9,7 +9,7 @@
                     <p class="text">
                         Hello, I’m a UI/UX Designer & Frontend Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.
                     </p>
-                    <table class="table table-striped">
+                    <table class="table table-striped mb-5">
                         <tbody>
                         <tr>
                             <td>
@@ -41,6 +41,9 @@
                         </tr>
                         </tbody>
                     </table>
+                    <a href="#contacts" class="btn mb-5">
+                        Связаться
+                    </a>
                 </div>
             </div>
         </div>

@@ -15,11 +15,4 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-    font-family: $font;
-
-    .container {
-      max-width: 1350px;
-    }
-  }
 </style>

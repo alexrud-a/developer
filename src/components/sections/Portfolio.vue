@@ -2,7 +2,7 @@
     <section class="section portfolio" data-anchor="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 mt-5">
                     <h2 class="title mt-5">
                         Портфолио
                     </h2>

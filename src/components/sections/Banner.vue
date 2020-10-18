@@ -1,6 +1,5 @@
 <template>
     <section class="section banner">
-        <Header/>
         <b-carousel
                 id="carousel-1"
                 :interval="4000"
@@ -23,13 +22,8 @@
 </template>
 
 <script>
-    import Header from "./Header";
     export default {
         name: "Banner",
-        components: {
-            Header
-
-        }
     }
 </script>
 

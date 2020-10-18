@@ -27,6 +27,10 @@ import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 
 Vue.use(CoolLightBox)
 
+import VueNumber from 'vue-number-animation'
+
+Vue.use(VueNumber)
+
 Vue.config.productionTip = false
 
 new Vue({
