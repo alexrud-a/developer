@@ -83,6 +83,7 @@
         width: 100%;
         z-index: 9;
         background-color: rgba(250,250,250,0.4);
+        padding: 0 15px;
 
         @media screen and (min-width: $tablet) {
             background-color: transparent;
