@@ -2,7 +2,7 @@
     <section class="section contacts" data-anchor="contacts">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mt-5">
                     <h3 class="title mt-5">
                         Контакты
                     </h3>

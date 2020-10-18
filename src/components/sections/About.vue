@@ -2,8 +2,8 @@
     <section class="section about" data-anchor="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 offset-md-7">
-                    <h2 class="title">
+                <div class="col-md-4 offset-md-7 mt-5">
+                    <h2 class="title mt-5">
                         Обо мне
                     </h2>
                     <p class="text">

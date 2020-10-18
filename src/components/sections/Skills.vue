@@ -12,7 +12,7 @@
                     <p>
                         I have over five years of experience in freelancing professionally in this field, in addition to a lifetime’s amount of serious study about these subjects in my off time. I work in a range of creative areas including web design & development, illustration & logos, animation & photography.
                     </p>
-                    <a href="#contacts" class="btn mt-5 mb-2">
+                    <a href="#contacts" class="btn mt-4 mb-5">
                         Связаться
                     </a>
                 </div>
