@@ -1,29 +1,50 @@
 <template>
-    <section class="section banner">
+    <section class="section banner" data-anchor="home">
         <b-carousel
+                v-if="content"
                 id="carousel-1"
                 :interval="4000"
                 controls
         >
             <!-- Text slides with image -->
             <b-carousel-slide
-                    caption="Hello, I'm Carmen"
-                    text="I'm Developer"
-                    img-src="img/home-1.jpg"
+                    v-for="(slide, index) in content.slider"
+                    :key="index"
+                    :caption="slide.title"
+                    :text="slide.subtitle"
+                    :img-src="slide.img"
             >
             </b-carousel-slide>
-            <b-carousel-slide
-                    caption="Hello, I'm Carmen"
-                    text="I'm Designer"
-                    img-src="img/home-6.jpg"
-            ></b-carousel-slide>
         </b-carousel>
     </section>
 </template>
 
 <script>
+    import axios from "axios";
     export default {
         name: "Banner",
+        data(){
+            return {
+                content: [],
+            }
+        },
+        methods: {
+            GetContent() {
+                return axios('http://dev.alexru3k.beget.tech/wp-json/wp/v2/pages/2', {
+                    method: "GET"
+                })
+                    .then((response) => {
+                        this.content = response.data.acf;
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                        return error;
+                    })
+            },
+        },
+        created() {
+            this.GetContent()
+        }
     }
 </script>
 
